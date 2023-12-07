@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">demo-app</string>
+    <string name="label_employee_data">Dane Pracownika</string>
+    <string name="label_name">Imię</string>
+    <string name="label_surname">Nazwisko</string>
+    <string name="label_position">Stanowisko</string>
+    <string name="label_generate_password_button">Generuj hasło</string>
+    <string name="label_generate_password">Generowanie hasła</string>
+    <string name="label_pass_len">Ile znaków?</string>
+    <string name="label_pass_capital_letters">Małe i wielkie litery</string>
+    <string name="label_pass_numebrs">Cyfry</string>
+    <string name="label_pass_special_char">Znaki specjalne</string>
+    <string name="label_confirm">Zatwierdź</string>
+    <string name="hint_name">Podaj Imię</string>
+    <string name="hint_surname">Podaj Nazwisko</string>
+    <string name="hint_position">Stanowisko</string>
+    <string name="hint_pass_len">Podaj długość hasła</string>
+    <string-array name="positions">
+        <item>Kierownik</item>
+        <item>Starszy programista</item>
+        <item>Młodszy programista</item>
+        <item>Tester</item>
+    </string-array>
+</resources>

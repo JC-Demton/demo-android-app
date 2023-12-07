@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/labelEmployeeData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/label_employee_data"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/labelName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelName"
+        android:layout_width="@dimen/label_width"
+        android:layout_height="@dimen/label_height"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/label_name"
+        app:layout_constraintBottom_toTopOf="@+id/labelSurname"
+        app:layout_constraintEnd_toStartOf="@+id/editTextName"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="@dimen/data_enter_width"
+        android:layout_height="@dimen/data_enter_height"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="60dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="@string/hint_name"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/labelName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelSurname"
+        android:layout_width="@dimen/label_width"
+        android:layout_height="@dimen/label_height"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/label_surname"
+        app:layout_constraintBottom_toTopOf="@+id/labelPosition"
+        app:layout_constraintEnd_toStartOf="@+id/editTextSurname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelName" />
+
+    <EditText
+        android:id="@+id/editTextSurname"
+        android:layout_width="@dimen/data_enter_width"
+        android:layout_height="@dimen/data_enter_height"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="@string/hint_surname"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerPosition"
+        app:layout_constraintStart_toEndOf="@+id/labelSurname"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+    <TextView
+        android:id="@+id/labelPosition"
+        android:layout_width="@dimen/label_width"
+        android:layout_height="@dimen/label_height"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/label_position"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerPosition"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelSurname" />
+
+    <Spinner
+        android:id="@+id/spinnerPosition"
+        android:layout_width="@dimen/data_enter_width"
+        android:layout_height="@dimen/data_enter_height"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toEndOf="@+id/labelPosition"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSurname" />
+
+    <TextView
+        android:id="@+id/labelGenPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="215dp"
+        android:text="@string/label_generate_password"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextPassLen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelEmployeeData" />
+
+    <TextView
+        android:id="@+id/labelPassLen"
+        android:layout_width="@dimen/label_width"
+        android:layout_height="@dimen/label_height"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="18dp"
+        android:text="@string/label_pass_len"
+        app:layout_constraintEnd_toStartOf="@+id/editTextPassLen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelGenPass" />
+
+    <EditText
+        android:id="@+id/editTextPassLen"
+        android:layout_width="@dimen/data_enter_width"
+        android:layout_height="@dimen/data_enter_height"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:ems="10"
+        android:hint="@string/hint_pass_len"
+        android:inputType="text"
+        app:layout_constraintStart_toEndOf="@+id/labelPassLen"
+        app:layout_constraintTop_toBottomOf="@+id/labelGenPass" />
+
+    <CheckBox
+        android:id="@+id/checkBoxCapital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/label_pass_capital_letters"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxNum"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelPassLen" />
+
+    <CheckBox
+        android:id="@+id/checkBoxNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/label_pass_numebrs"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxSpecial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxCapital" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSpecial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/label_pass_special_char"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxNum" />
+
+    <Button
+        android:id="@+id/buttonGenPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/button_color"
+        android:text="@string/label_generate_password_button"
+        app:layout_constraintBottom_toTopOf="@+id/buttonConfirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="@dimen/button_confirm_width"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/button_color"
+        android:text="@string/label_confirm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
